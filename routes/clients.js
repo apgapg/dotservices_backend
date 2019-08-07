@@ -6,6 +6,7 @@ const router = express.Router();
 router.get('/', function (req, res, next) {
   Client.find({})
       .populate('categories')
+      .populate('areas')
       .sort({
         updatedAt: -1
       })
