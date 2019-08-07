@@ -4,7 +4,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    Adv.find()
+    Adv.find({})
         .populate({
             path: 'client',
             populate: {
