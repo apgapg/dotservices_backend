@@ -15,7 +15,7 @@ const AdvSchema = new Schema({
             type: Boolean,
             required: true
         },
-        client: [{type: Schema.Types.ObjectId, ref: 'client'}],
+        client: {type: Schema.Types.ObjectId, ref: 'client'},
     }
 );
 
