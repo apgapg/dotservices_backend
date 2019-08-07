@@ -27,6 +27,6 @@ const ClientSchema = new Schema({
 
 const Area = mongoose.model('area', AreaSchema, 'areas');
 const Category = mongoose.model('category', CategorySchema, 'category');
-const Stylist = mongoose.model('clients', ClientSchema, 'clients');
+const Stylist = mongoose.model('client', ClientSchema, 'clients');
 
-module.exports = Stylist;
+module.exports = {Stylist, Category, Area};
