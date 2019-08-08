@@ -16,7 +16,9 @@ const AdvSchema = new Schema({
             required: true
         },
         client: {type: Schema.Types.ObjectId, ref: 'client'},
-    }
+
+    },
+    {timestamps: true}
 );
 
 const Adv = mongoose.model('advs', AdvSchema, 'advertisements');
