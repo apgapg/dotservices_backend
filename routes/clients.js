@@ -4,7 +4,9 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-	Client.Stylist.find()
+	Client.Stylist.find({
+		$or: [{visibility: {$exists: false}},{visibility: true}],
+	})
 		.populate('categories')
 		.populate('areas')
 		.sort({

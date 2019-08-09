@@ -21,6 +21,10 @@ const ClientSchema = new Schema({
 			type: String,
 			required: true
 		},
+		visibility: {
+			type: Boolean,
+			default: true,
+		},
 		categories: [{type: Schema.Types.ObjectId, ref: 'category'}],
 		areas: [{type: Schema.Types.ObjectId, ref: 'area'}]
 	}, {timestamps: true}
